@@ -16,12 +16,15 @@ source myenv/bin/activate
 pip install kagglehub
 ```
 ### Downloading the dataset
-- Must have python venv running
+- Must have python venv running:
+```bash
+source myenv/bin/activate
+```
 - From the root of the repository, run:
 ```bash
 python3 src/read_nba_database.py
 ```
-- The script will download the dataset and prints the location of the downloaded dataset
+- The script will download the dataset and prints its location, then it will copy that dataset to './cmpe138_project'
 - Example output:
 ```bash
 Path to dataset files: /home/name/.cache/kagglehub/datasets/wyattowalsh/basketball/versions/238
