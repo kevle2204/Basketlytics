@@ -1,6 +1,16 @@
 import kagglehub
+import shutil
 
-# Download latest version
-path = kagglehub.dataset_download("wyattowalsh/basketball")
+def main():
+    # Download latest version
+    dataset_path = kagglehub.dataset_download("wyattowalsh/basketball")
+    print("Path to dataset files:", dataset_path)
 
-print("Path to dataset files:", path)
+    # NOTE(Khanh): the downloaded dataset is a directory, we're copying the entire DIRECTORY, not a single file
+    shutil.copytree(dataset_path, "./cmpe138_project")
+
+
+if __name__=="__main__":
+    main()
+
+
